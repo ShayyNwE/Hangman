@@ -1,0 +1,52 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+#container {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#word_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.letter_container {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+#guesses, #resultMessage {
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+#resultMessage {
+    font-weight: bold;
+    color: #333;
+}
+
+#hangman-image {
+    display: none;
+    width: 300px; 
+    height: auto;
+    margin-left: 660px;
+}
