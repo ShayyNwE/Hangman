@@ -1,4 +1,14 @@
-const wordList = ["Nuno", "Zakariya", "Koman", "Aurelien", "Rayane", "Sonia", "Youness", "Iyad", "Ilias", "Tom", "Mattéo", "Ihsane", "Romain", "Antoine"];
+function startGame() {
+    const selectedCategory = document.getElementById('category').value;
+    document.getElementById('homePage').style.display = 'none';
+    document.getElementById('hangmanPage').style.display = 'block';
+    chooseRandomWord(selectedCategory);
+}
+
+const categories = {
+    animals: ["Lion", "Elephant", "Giraffe", "Monkey", "Penguin"],
+    countries: ["France", "Canada", "Japan", "Australia", "Brazil"]
+};
 var randomWord;
 var wrongGuess = 0;
 var rightGuess = 0;
@@ -12,11 +22,19 @@ var loseSound = document.createElement('audio');
 $(winSound).attr("src", "../Tom_JULLIAT_EXAM/sounds/win.mp3");
 $(loseSound).attr("src", "../Tom_JULLIAT_EXAM/sounds/loss.mp3");
 
-function chooseRandomWord() {
-    const randomNumber = Math.floor(Math.random() * wordList.length);
-    randomWord = wordList[randomNumber];
+function chooseRandomWord(category) {
+    const categoryWords = categories[category];
+    const randomNumber = Math.floor(Math.random() * categoryWords.length);
+    randomWord = categoryWords[randomNumber];
+
+    $("#word_container").html('');
+
     for (let i = 0; i < randomWord.length; i++) {
-        $("#word_container").append(`<div class="letter_container" id="letter_${[i]}"> _ </div>`);
+        if (randomWord[i] === ' ') {
+            $("#word_container").append(' ');
+        } else {
+            $("#word_container").append(`<div class="letter_container" id="letter_${[i]}"> _ </div>`);
+        }
     }
 }
 

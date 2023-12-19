@@ -1,19 +1,55 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f0f0f0;
+    background-color: #000;
+    color: #fff;
     margin: 0;
     padding: 0;
 }
 
-h1 {
+#homePage {
     text-align: center;
-    color: #333;
+    margin-top: 100px;
+}
+
+h1 {
+    color: #ffcc00;
+    font-size: 36px;
+}
+
+p {
+    font-size: 18px;
+}
+
+button {
+    background-color: #3498db; /* Couleur bleue */
+    color: white;
+    padding: 15px 30px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease; /* Transition pour l'effet hover */
+}
+
+button:hover {
+    background-color: #2980b9; /* Couleur bleue plus foncée au survol */
+}
+
+#category {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #222;
+    color: #fff;
+    margin-top: 10px;
 }
 
 #container {
     max-width: 600px;
     margin: 20px auto;
-    background-color: #fff;
+    background-color: #222;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -29,9 +65,15 @@ h1 {
 .letter_container {
     margin: 10px;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #333;
     border-radius: 5px;
     font-size: 18px;
+}
+
+.gameTitle {
+    color: #ffcc00;
+    text-align: center;
+    margin-top: 20px;
 }
 
 #guesses, #resultMessage {
@@ -41,7 +83,7 @@ h1 {
 
 #resultMessage {
     font-weight: bold;
-    color: #333;
+    color: #ffcc00;
 }
 
 #hangman-image {

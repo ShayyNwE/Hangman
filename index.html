@@ -6,14 +6,23 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <h1> Hangman </h1>
-    <div id="container">
-        <div id="word_container">
-            <!-- This is where the letters of the word will be displayed -->
-        </div>
-        <div id="guesses"> Wrong Guesses: 0</div>
-        
+    <div id="homePage">
+        <h1>Welcome to Hangman Game</h1>
+        <p>Choose a category and click the button below to start playing!</p>
+        <label for="category">Select a category:</label>
+        <select id="category" name="category">
+            <option value="animals">Animals</option>
+            <option value="countries">Countries</option>
+        </select>
+        <button onclick="startGame()">Start Game</button>
     </div>
+
+    <div id="hangmanPage" style="display: none;">
+        <h1 class="gameTitle"> Hangman </h1>
+        <div id="container">
+            <div id="word_container"></div>
+            <div id="guesses"> Wrong Guesses: 0</div>
+        </div>
 
     <img id="hangman-image" src="../Final exam Dublin/images/image01.png" alt="Hangman Image">
     <img id="hangman-image" src="../Final exam Dublin/images/image02.png" alt="Hangman Image">
